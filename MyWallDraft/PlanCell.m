@@ -30,7 +30,8 @@
     plan = [[Plan alloc]init];
     UIImageView* thumbnailView = [[UIImageView alloc]initWithImage:plan.thumbnail];
     thumbnailView.contentMode = UIViewContentModeScaleAspectFill;
-    thumbnailView.frame = self.frame;
+    self.contentView.clipsToBounds = YES;
+    thumbnailView.frame = self.contentView.frame;
     [self.contentView addSubview:thumbnailView];
     
     return self;
