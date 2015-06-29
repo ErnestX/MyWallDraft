@@ -10,4 +10,17 @@
 
 @implementation Plan
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.timeStamp = [NSDate date];
+        NSURL* p = [[NSBundle mainBundle]URLForResource:@"thumbnailPlaceHolder" withExtension:@"jpg"];
+        self.thumbnail = [UIImage imageWithData:[NSData dataWithContentsOfURL:p]];
+        self.layers = [NSMutableArray array];
+    }
+    
+    return self;
+}
+
 @end

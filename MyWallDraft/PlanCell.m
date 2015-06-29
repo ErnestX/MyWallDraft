@@ -7,9 +7,11 @@
 //
 
 #import "PlanCell.h"
+#import "Plan.h"
 
 @implementation PlanCell {
     UILabel* textLabel;
+    Plan* plan;
 }
 
 - (id) initWithFrame:(CGRect)frame
@@ -20,10 +22,16 @@
     
     self.backgroundColor = [UIColor whiteColor];
     
-    textLabel = [[UILabel alloc]initWithFrame:self.bounds];
-    textLabel.textAlignment = NSTextAlignmentCenter;
-    textLabel.font = [UIFont boldSystemFontOfSize:20];
-    [self.contentView addSubview:textLabel];
+//    textLabel = [[UILabel alloc]initWithFrame:self.bounds];
+//    textLabel.textAlignment = NSTextAlignmentCenter;
+//    textLabel.font = [UIFont boldSystemFontOfSize:20];
+//    [self.contentView addSubview:textLabel];
+    
+    plan = [[Plan alloc]init];
+    UIImageView* thumbnailView = [[UIImageView alloc]initWithImage:plan.thumbnail];
+    thumbnailView.contentMode = UIViewContentModeScaleAspectFill;
+    thumbnailView.frame = self.frame;
+    [self.contentView addSubview:thumbnailView];
     
     return self;
 }
