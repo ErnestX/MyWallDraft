@@ -14,6 +14,9 @@
 		CA34487F1B3CC1A200227576 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA34487E1B3CC1A200227576 /* Images.xcassets */; };
 		CA3448821B3CC1A200227576 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3448801B3CC1A200227576 /* LaunchScreen.xib */; };
 		CA34488E1B3CC1A200227576 /* MyWallDraftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA34488D1B3CC1A200227576 /* MyWallDraftTests.m */; };
+		CA34489C1B3DD35D00227576 /* PlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA34489B1B3DD35D00227576 /* PlanCell.m */; };
+		CA4032741B41E05000ADB08C /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4032731B41E05000ADB08C /* Plan.m */; };
+		CA689AF11B3E0C3A008BD7C0 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA689AF01B3E0C3A008BD7C0 /* CollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		CA3448871B3CC1A200227576 /* MyWallDraftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyWallDraftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA34488C1B3CC1A200227576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA34488D1B3CC1A200227576 /* MyWallDraftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWallDraftTests.m; sourceTree = "<group>"; };
+		CA3448971B3CD42F00227576 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		CA34489A1B3DD35D00227576 /* PlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanCell.h; sourceTree = "<group>"; };
+		CA34489B1B3DD35D00227576 /* PlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanCell.m; sourceTree = "<group>"; };
+		CA4032721B41E05000ADB08C /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
+		CA4032731B41E05000ADB08C /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
+		CA689AF01B3E0C3A008BD7C0 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +94,12 @@
 				CA3448761B3CC1A200227576 /* AppDelegate.m */,
 				CA3448781B3CC1A200227576 /* ViewController.h */,
 				CA3448791B3CC1A200227576 /* ViewController.m */,
+				CA3448971B3CD42F00227576 /* CollectionViewController.h */,
+				CA689AF01B3E0C3A008BD7C0 /* CollectionViewController.m */,
+				CA34489A1B3DD35D00227576 /* PlanCell.h */,
+				CA34489B1B3DD35D00227576 /* PlanCell.m */,
+				CA4032721B41E05000ADB08C /* Plan.h */,
+				CA4032731B41E05000ADB08C /* Plan.m */,
 				CA34487B1B3CC1A200227576 /* Main.storyboard */,
 				CA34487E1B3CC1A200227576 /* Images.xcassets */,
 				CA3448801B3CC1A200227576 /* LaunchScreen.xib */,
@@ -220,7 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA34487A1B3CC1A200227576 /* ViewController.m in Sources */,
+				CA34489C1B3DD35D00227576 /* PlanCell.m in Sources */,
 				CA3448771B3CC1A200227576 /* AppDelegate.m in Sources */,
+				CA689AF11B3E0C3A008BD7C0 /* CollectionViewController.m in Sources */,
+				CA4032741B41E05000ADB08C /* Plan.m in Sources */,
 				CA3448741B3CC1A200227576 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +436,7 @@
 				CA3448931B3CC1A200227576 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA3448941B3CC1A200227576 /* Build configuration list for PBXNativeTarget "MyWallDraftTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +445,7 @@
 				CA3448961B3CC1A200227576 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
