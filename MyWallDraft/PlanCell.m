@@ -8,10 +8,12 @@
 
 #import "PlanCell.h"
 #import "Plan.h"
+#define TIMESTAMP_HEIGHT 30.0
 
 @implementation PlanCell {
-    UILabel* textLabel;
+    UILabel* timeLabel;
     Plan* plan;
+    UIImageView* thumbnailView;
 }
 
 - (id) initWithFrame:(CGRect)frame
@@ -20,19 +22,16 @@
         return nil;
     }
     
-    self.backgroundColor = [UIColor whiteColor];
-    
-//    textLabel = [[UILabel alloc]initWithFrame:self.bounds];
-//    textLabel.textAlignment = NSTextAlignmentCenter;
-//    textLabel.font = [UIFont boldSystemFontOfSize:20];
-//    [self.contentView addSubview:textLabel];
-    
     plan = [[Plan alloc]init];
-    UIImageView* thumbnailView = [[UIImageView alloc]initWithImage:plan.thumbnail];
+    thumbnailView = [[UIImageView alloc]initWithImage:plan.thumbnail];
     thumbnailView.contentMode = UIViewContentModeScaleAspectFill;
     self.contentView.clipsToBounds = YES;
-    thumbnailView.frame = self.contentView.frame;
+    thumbnailView.frame = CGRectMake(0.0, 0.0, self.contentView.frame.size.width, self.contentView.frame.size.height - TIMESTAMP_HEIGHT);
     [self.contentView addSubview:thumbnailView];
+    
+    timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0.0, self.contentView.frame.size.height - TIMESTAMP_HEIGHT, self.contentView.frame.size.width, TIMESTAMP_HEIGHT)];
+    timeLabel.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:timeLabel];
     
     return self;
 }
@@ -47,7 +46,20 @@
 - (void)setText:(NSString *)text
 {
     _text = [text copy];
-    textLabel.text = self.text;
+    timeLabel.text = self.text;
+}
+
+- (void)updateLayout
+{
+    NSLog(@"update layout");
+    thumbnailView.frame = CGRectMake(0.0, 0.0, self.contentView.frame.size.width, self.contentView.frame.size.height - TIMESTAMP_HEIGHT);
+    timeLabel.frame = CGRectMake(0.0, self.contentView.frame.size.height - TIMESTAMP_HEIGHT, self.contentView.frame.size.width, TIMESTAMP_HEIGHT);
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    [self updateLayout];
 }
 
 @end

@@ -25,10 +25,12 @@ static NSString *CellIdentifier = @"Cell Identifier";
     dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"h:mm:ss a" options:0 locale:[NSLocale currentLocale]]];
     
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
     flowLayout.minimumInteritemSpacing = 20.0f;
     flowLayout.minimumLineSpacing = 40.0f;
-    flowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    flowLayout.sectionInset = UIEdgeInsetsMake(40, 40, 40, 40);
     flowLayout.itemSize = CGSizeMake(200, 200);
     
     [self.collectionView registerClass: [PlanCell class] forCellWithReuseIdentifier:CellIdentifier];
@@ -67,11 +69,34 @@ static NSString *CellIdentifier = @"Cell Identifier";
     } completion:nil];
 }
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView
-//                  layout:(UICollectionViewLayout *)collectionViewLayout
-//  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+//    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+//    if (orientation == UIDeviceOrientationPortrait ||
+//        orientation == UIDeviceOrientationPortraitUpsideDown) {
+        return CGSizeMake(300.0, 250.0);
+//    } else {
+//        return CGSizeMake(420.0, 370.0);
+//    }
+}
+
+//- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 //{
-//    return CGSizeZero;
+//    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinator> coordinator) {
+//        [self.collectionView performBatchUpdates:^{
+//            NSMutableArray* ips = [NSMutableArray array];
+//            for (NSInteger i = 0; i < [self collectionView:self.collectionView numberOfItemsInSection:0]; i++) {
+//                NSIndexPath* ip = [NSIndexPath indexPathForItem:i inSection:0];
+//                [(PlanCell*)[self collectionView:self.collectionView cellForItemAtIndexPath:ip]updateLayout];
+//                [ips addObject:ip];
+//            }
+//            
+//            [self.collectionView reloadItemsAtIndexPaths:ips];
+//        } completion:nil];
+//    } completion:nil];
+//    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 //}
 
 @end

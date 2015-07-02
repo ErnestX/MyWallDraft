@@ -16,7 +16,7 @@
 		CA34488E1B3CC1A200227576 /* MyWallDraftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA34488D1B3CC1A200227576 /* MyWallDraftTests.m */; };
 		CA34489C1B3DD35D00227576 /* PlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA34489B1B3DD35D00227576 /* PlanCell.m */; };
 		CA4032741B41E05000ADB08C /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4032731B41E05000ADB08C /* Plan.m */; };
-		CA4032761B41E68800ADB08C /* thumbnailPlaceHolder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA4032751B41E68800ADB08C /* thumbnailPlaceHolder.jpg */; };
+		CA4032791B41FD9700ADB08C /* thumbnailPlaceHolder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA4032781B41FD9700ADB08C /* thumbnailPlaceHolder.jpg */; };
 		CA689AF11B3E0C3A008BD7C0 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA689AF01B3E0C3A008BD7C0 /* CollectionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,7 @@
 		CA34489B1B3DD35D00227576 /* PlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanCell.m; sourceTree = "<group>"; };
 		CA4032721B41E05000ADB08C /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
 		CA4032731B41E05000ADB08C /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
-		CA4032751B41E68800ADB08C /* thumbnailPlaceHolder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumbnailPlaceHolder.jpg; sourceTree = "<group>"; };
+		CA4032781B41FD9700ADB08C /* thumbnailPlaceHolder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumbnailPlaceHolder.jpg; sourceTree = "<group>"; };
 		CA689AF01B3E0C3A008BD7C0 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +140,7 @@
 		CA4032771B41E69300ADB08C /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA4032751B41E68800ADB08C /* thumbnailPlaceHolder.jpg */,
+				CA4032781B41FD9700ADB08C /* thumbnailPlaceHolder.jpg */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 			files = (
 				CA34487D1B3CC1A200227576 /* Main.storyboard in Resources */,
 				CA3448821B3CC1A200227576 /* LaunchScreen.xib in Resources */,
-				CA4032761B41E68800ADB08C /* thumbnailPlaceHolder.jpg in Resources */,
+				CA4032791B41FD9700ADB08C /* thumbnailPlaceHolder.jpg in Resources */,
 				CA34487F1B3CC1A200227576 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
