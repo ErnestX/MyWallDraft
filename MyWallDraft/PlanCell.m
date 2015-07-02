@@ -49,17 +49,4 @@
     timeLabel.text = self.text;
 }
 
-- (void)updateLayout
-{
-    NSLog(@"update layout");
-    thumbnailView.frame = CGRectMake(0.0, 0.0, self.contentView.frame.size.width, self.contentView.frame.size.height - TIMESTAMP_HEIGHT);
-    timeLabel.frame = CGRectMake(0.0, self.contentView.frame.size.height - TIMESTAMP_HEIGHT, self.contentView.frame.size.width, TIMESTAMP_HEIGHT);
-}
-
-- (void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-    [self updateLayout];
-}
-
 @end

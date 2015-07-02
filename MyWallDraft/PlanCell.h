@@ -12,6 +12,4 @@
 
 @property (nonatomic, copy) NSString* text;
 
-- (void)updateLayout;
-
 @end

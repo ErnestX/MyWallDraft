@@ -73,30 +73,20 @@ static NSString *CellIdentifier = @"Cell Identifier";
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-//    if (orientation == UIDeviceOrientationPortrait ||
-//        orientation == UIDeviceOrientationPortraitUpsideDown) {
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIDeviceOrientationPortrait ||
+        orientation == UIDeviceOrientationPortraitUpsideDown) {
+        return CGSizeMake(320.0, 250.0);
+    } else {
         return CGSizeMake(300.0, 250.0);
-//    } else {
-//        return CGSizeMake(420.0, 370.0);
-//    }
+    }
 }
 
-//- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
-//{
-//    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinator> coordinator) {
-//        [self.collectionView performBatchUpdates:^{
-//            NSMutableArray* ips = [NSMutableArray array];
-//            for (NSInteger i = 0; i < [self collectionView:self.collectionView numberOfItemsInSection:0]; i++) {
-//                NSIndexPath* ip = [NSIndexPath indexPathForItem:i inSection:0];
-//                [(PlanCell*)[self collectionView:self.collectionView cellForItemAtIndexPath:ip]updateLayout];
-//                [ips addObject:ip];
-//            }
-//            
-//            [self.collectionView reloadItemsAtIndexPaths:ips];
-//        } completion:nil];
-//    } completion:nil];
-//    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-//}
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinator> coordinator) {
+        [self.collectionView performBatchUpdates:nil completion:nil];
+    }completion:nil];
+}
 
 @end
